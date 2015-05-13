@@ -1,0 +1,11 @@
+#!/bin/bash
+
+scp -pr usuario@dominio:/home/usuario/servidor/server.log /home/$1/
+
+if [ $? -eq 0 ]; then 
+	echo "La copia se ha realizado Correctamente."
+	exit 0
+else 
+	echo "No se ha ejecutabo bien el comando, asegusese de que escribe bien su Usuario junto al script o se haya introducido bien la Clave."
+	
+fi
